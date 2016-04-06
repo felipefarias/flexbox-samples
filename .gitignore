@@ -1,9 +1,20 @@
+#Folders
 .DS_Store
+
+# Webpack
+assets/bundle.js
+assets/bundle.css
+node_modules/
+webpack-stats.json
+
+# Sass
 .sass-cache
-*.pyc
-*.pid
 *.map
+
+# Css
 *.css
+
+# General
 env/
 output/
 cache/
