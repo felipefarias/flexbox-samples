@@ -8,11 +8,11 @@ var autoprefixer = require('autoprefixer');
 module.exports = {
   entry: [
     'bootstrap-loader',
-    './assets/js/index.js',
+    './example/assets/js/index.js',
   ],
   output: {
-    path: path.resolve('./assets/'),
-    publicPath: "/assets/",
+    path: path.resolve('./example/assets/'),
+    publicPath: "/example/assets/",
     filename: "bundle.js"
   },
   module: {
