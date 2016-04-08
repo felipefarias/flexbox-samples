@@ -1,0 +1,30 @@
+// Product Item
+
+.product-item {
+  @extend .card;
+
+  p {
+    @extend .card-text;
+  }
+
+  .product-details {
+    @include make-row();
+    position: relative;
+    height: 100%;
+
+    img, .price {
+      @include make-col();
+      @include make-col-span(6);
+    }
+
+    img {
+      @extend .m-x-auto, .img-fluid, .img-circle;
+    }
+
+    .price {
+      @include position(absolute, $top: 50%);
+      transform: translateY(-50%);
+      font-size: 2rem;
+    }
+  }
+}

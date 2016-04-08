@@ -1,0 +1,24 @@
+// Global Style
+
+html, body {
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+
+  @include media-breakpoint-down(xs) {
+    font-size: 14px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 18px;
+  }
+}
+
+// Headings
+h1 {
+  @extend .text-xs-center;
+}
+
+// List
+ul {
+  @extend .unstyled-list;
+}
