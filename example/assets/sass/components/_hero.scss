@@ -10,4 +10,10 @@
   p {
     @extend .text-muted;
   }
+
+  @include media-breakpoint-down(xs) {
+    .btn {
+      @extend .m-b-1;
+    }
+  }
 }

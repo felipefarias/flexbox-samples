@@ -7,8 +7,8 @@
     @extend .hidden-md-up, .pull-xs-right;
   }
 
-  .navbar-collapse {
-    @extend .collapse, .inverse, .navbar-toggleable-sm;
+  .collapse {
+    @extend .navbar-toggleable-sm;
   }
 
   @include media-breakpoint-down(sm) {

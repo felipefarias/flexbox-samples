@@ -1,10 +1,10 @@
 // Product Item
 
 .product-item {
-  @extend .card;
+  @extend .p-a-1, .card;
 
   p {
-    @extend .card-text;
+    @extend .m-t-1, .card-text;
   }
 
   .product-details {
@@ -23,6 +23,7 @@
 
     .price {
       @include position(absolute, $top: 50%);
+      @extend .text-xs-center;
       transform: translateY(-50%);
       font-size: 2rem;
     }
