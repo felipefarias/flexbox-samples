@@ -1,0 +1,27 @@
+// Navigation
+
+.navbar {
+  @extend .navbar-dark, .bg-inverse;
+
+  .navbar-toggler {
+    @extend .hidden-md-up, .pull-xs-right;
+  }
+
+  .collapse {
+    @extend .navbar-toggleable-sm;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .navbar-header {
+      @include clearfix();
+    }
+
+    .nav-item, .nav-link {
+      float: none;
+    }
+
+    .nav-item + .nav-item {
+      margin-left: 0;
+    }
+  }
+}

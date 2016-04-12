@@ -19,22 +19,22 @@ npm start
  │   ├── js/
  │   │   └── index.js
  │   └── sass/
- │       ├── components/               # Navigation, footer, forms, cards, etc.
+ │       ├── components/                    # Navigation, footer, forms, cards, etc.
  │       ├── helpers/
  │       │   ├── _functions.scss
- │       │   ├── _helpers.scss         # Utility classes
+ │       │   ├── _helpers.scss              # Utility classes
  │       │   ├── _mixins.scss
  │       │   ├── _placeholders.scss
- │       │   └── _typography.scss      # Fonts variables and imports
- │       ├── pages/                    # Templates sass
+ │       │   └── _typography.scss           # Fonts variables and imports
+ │       ├── pages/                         # Templates' sass
  │       ├── vendor/
- │       │   └── custom-bootstrap.scss # Bootstrap's variables and classes to override
+ │       │   └── custom-bootstrap.scss      # Bootstrap's variables and classes to override
  │       │
- │       ├── _global.scss              # Base styles for all pages
- │       ├── _variables.scss           # Custom variables
- │       └── style.scss                # Main sass file (should only contain imports)
+ │       ├── _global.scss                   # Base styles for all pages
+ │       ├── _variables.scss                # Custom variables
+ │       └── style.scss                     # Main sass file (should only contain imports)
  ├── .babelrc
- ├── .bootstaprc                       # Bootstrap's config file
+ ├── .bootstaprc                            # Bootstrap's config file
  ├── package.json
  └── webpack.config.js
 ```
@@ -68,6 +68,34 @@ scripts:
   collapse: false
 ```
 
-## Examples
-Check out some [examples]()
-- Basic project
+You'll need to set the path to your `style.scss` and `custom-bootstrap.scss` files:
+
+```yaml
+bootstrapCustomizations: ./example/assets/sass/vendor/custom-bootstrap.scss
+
+# Import your custom styles here. You have access to all the bootstrap variables. If you require
+# your sass files separately, you will not have access to the bootstrap variables, mixins, clases, etc.
+# Usually this endpoint-file contains list of @imports of your application styles.
+
+appStyles: ./example/assets/sass/style.scss
+```
+
+## Webpack Configuration
+
+In the `webpack.config.js` file, set the **entry** and the **output**:
+
+```
+  entry: [
+    'bootstrap-loader',
+    './example/assets/js/index.js',
+  ],
+  output: {
+    path: path.resolve('./example/assets/'),
+    publicPath: "/example/assets/",
+    filename: "bundle.js"
+  },
+```
+
+## Example
+Check out a sample project in [example/](https://github.com/vintasoftware/frontend-boilerplate/tree/bootstrap-example/example). This project was based on [Bootstrap's Album Example](http://v4-alpha.getbootstrap.com/examples/album/).
+- Access it at: `http://localhost:8000/`

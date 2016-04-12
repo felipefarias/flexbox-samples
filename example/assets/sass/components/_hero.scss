@@ -1,0 +1,19 @@
+// Hero
+
+.hero {
+  @extend .jumbotron, .text-xs-center;
+
+  h1 {
+    @extend .display-4;
+  }
+
+  p {
+    @extend .text-muted;
+  }
+
+  @include media-breakpoint-down(xs) {
+    .btn {
+      @extend .m-b-1;
+    }
+  }
+}

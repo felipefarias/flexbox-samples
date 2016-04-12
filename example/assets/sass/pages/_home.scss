@@ -1,0 +1,23 @@
+// Home
+
+// Store
+.store {
+  @extend .m-y-2, .p-y-1;
+}
+
+// Products
+.products {
+  @include make-row();
+
+  .product {
+    @include make-col();
+
+    @include media-breakpoint-up(xs) {
+      @include make-col-span(12);
+    }
+
+    @include media-breakpoint-up(md) {
+      @include make-col-span(4);
+    }
+  }
+}

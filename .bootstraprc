@@ -52,13 +52,13 @@ extractStyles: true
 # Thus you can leverage the default calculations.
 # $input-height: $input-height * 1.10;
 
-bootstrapCustomizations: ./assets/sass/vendor/custom-bootstrap.scss
+bootstrapCustomizations: ./example/assets/sass/vendor/custom-bootstrap.scss
 
 # Import your custom styles here. You have access to all the bootstrap variables. If you require
 # your sass files separately, you will not have access to the bootstrap variables, mixins, clases, etc.
 # Usually this endpoint-file contains list of @imports of your application styles.
 
-appStyles: ./assets/sass/style.scss
+appStyles: ./example/assets/sass/style.scss
 
 ### Bootstrap styles
 styles:
@@ -81,19 +81,19 @@ styles:
   buttons: true
 
   # Components
-  animation: false
+  animation: true
   dropdown: false
   button-group: false
   input-group: false
   custom-forms: false
-  nav: false
-  navbar: false
-  card: false
+  nav: true
+  navbar: true
+  card: true
   breadcrumb: false
   pagination: false
   pager: false
   labels: false
-  jumbotron: false
+  jumbotron: true
   alert: false
   progress: false
   media: false
@@ -108,20 +108,21 @@ styles:
   carousel: false
 
   # Utility classes
-  utilities: false
-  utilities-spacing: false
-  utilities-responsive: false
+  utilities: true
+  utilities-spacing: true
+  utilities-background: true
+  utilities-responsive: true
 
 ### Bootstrap scripts
 scripts:
   alert: false
-  button: false
+  button: true
   carousel: false
-  collapse: false
+  collapse: true
   dropdown: false
   modal: false
   popover: false
   scrollspy: false
   tab: false
   tooltip: false
-  util: false
+  util: true

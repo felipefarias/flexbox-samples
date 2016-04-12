@@ -1,0 +1,16 @@
+// Main Style
+
+// General
+@import "variables";
+@import "helpers/mixins";
+@import "helpers/typography";
+@import "global";
+
+// Components
+@import "components/navigation";
+@import "components/footer";
+@import "components/hero";
+@import "components/product-item";
+
+// Pages
+@import "pages/home";
