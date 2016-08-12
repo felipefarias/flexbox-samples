@@ -11,9 +11,6 @@ webpack-stats.json
 .sass-cache
 *.map
 
-# Css
-*.css
-
 # General
 env/
 output/
