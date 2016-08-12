@@ -96,6 +96,15 @@ In the `webpack.config.js` file, set the **entry** and the **output**:
   },
 ```
 
+If you wish to extract the styles to a separate bundle, you must set `extractStyles` in the `bootstrap-loader`.
+
+```
+  entry: [
+    'bootstrap-loader/extractStyles',
+    './example/assets/js/index.js',
+  ],
+```
+
 ## Example
 Check out a sample project in [example/](https://github.com/vintasoftware/frontend-boilerplate/tree/bootstrap-example/example). This project was based on [Bootstrap's Album Example](http://v4-alpha.getbootstrap.com/examples/album/).
 - Access it at: `http://localhost:8000/`
