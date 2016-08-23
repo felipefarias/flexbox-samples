@@ -1,0 +1,61 @@
+//Flexbox Sample Page
+
+.flexbox-navbar {
+  list-style: none;
+  margin: 0; 
+  padding: 0;
+
+  background: deepskyblue;
+
+  display: flex;
+  flex-flow: row wrap;
+  /* This aligns items to the end line on main-axis */
+  justify-content: flex-end;
+}
+
+.flexbox-navbar a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+@media all and (max-width: 800px) {
+  .flexbox-navbar {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .flexbox-navbar {
+    flex-direction: column;
+    padding: 0;
+  }
+  
+  .flexbox-navbar a { 
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  
+  .flexbox-navbar li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+.flexbox-store {
+
+  &-container {
+    display: flex;
+    flex-flow: row wrap;
+    height: 500px;
+
+    justify-content: space-around
+  }
+
+  &-product-item {
+    margin: auto;
+  }
+}
